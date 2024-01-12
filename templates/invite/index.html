@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Helllloooooo!</h1>
+  <div id="vk_send_message"></div>
+  <script type="text/javascript">
+  <!-- TODO use template for group id -->
+  VK.Widgets.AllowMessagesFromCommunity("vk_send_message", {height: 30}, "223616799");
+  </script>
 {% endblock content %}
