@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class SentToken(models.Model):
+    token = models.CharField(max_length=384)
+    user_id = models.CharField(max_length=20)
