@@ -14,7 +14,6 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -75,6 +74,14 @@ WSGI_APPLICATION = 'dormyboba_morda.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dormyboba',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': 'postgresql',
+        'PORT': '5432',
+    },
+    'test': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
