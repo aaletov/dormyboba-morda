@@ -10,7 +10,7 @@ from django.db import models
 
 class SentToken(models.Model):
     sent_token_id = models.AutoField(primary_key=True)
-    token = models.CharField(max_length=1024, blank=True, null=True)
+    token = models.CharField(unique=True, max_length=1024, blank=True, null=True)
     user_id = models.IntegerField(unique=True, blank=True, null=True)
 
     class Meta:
